@@ -23,6 +23,4 @@ document.onkeypress=function(e)
             i++;
         }
     }
-    setTimeout(typeWriter, speed);
 }
-$("#code").scrollTop($("#code")[0].scrollHeight);
