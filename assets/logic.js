@@ -19,7 +19,7 @@ document.onkeypress=function(e)
             i++;
         }
         else{
-            document.getElementById("code").innerHTML += "<br>>   ";
+            document.getElementById("code").innerHTML += "<br><br>>   ";
             i++;
         }
     }
