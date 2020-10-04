@@ -7,20 +7,33 @@ var pressCount = 0;
 
 document.onkeypress=function(e)
 {
-    if (i >= txt.length)
+    if(e.key=="~")
     {
-        i = 0;
+        console.log(e.key);
+        alert("Access Granted");
     }
-    for (let count = 0; count < lettersPerClick; count++)
+    else  if(e.key=="!")
     {
-        if(txt.charAt(i)!='\n')
+        console.log(e.key);
+        alert("Access Denied");
+    }
+    else
+    {
+        if (i >= txt.length)
         {
-            document.getElementById("code").innerHTML += txt.charAt(i);
-            i++;
+            i = 0;
         }
-        else{
-            document.getElementById("code").innerHTML += "<br><br>>   ";
-            i++;
+        for (let count = 0; count < lettersPerClick; count++)
+        {
+            if(txt.charAt(i)!='\n')
+            {
+                document.getElementById("code").innerHTML += txt.charAt(i);
+                i++;
+            }
+            else{
+                document.getElementById("code").innerHTML += "<br><br>>   ";
+                i++;
+            }
         }
     }
 }
