@@ -2,20 +2,20 @@ var i = 0;
 const fileUrl = 'assets/code.txt';
 var txt ; fetch(fileUrl).then( r => r.text() ).then( t => txt=t )
 var lettersPerClick = 4;
-var speed = 70;
-var pressCount = 0;
 
 document.onkeypress=function(e)
 {
     if(e.key=="~")
     {
-        console.log(e.key);
-        alert("Access Granted");
+        document.getElementById("grant").style.display="block";
+        document.getElementById("code").innerHTML = ">   ";
+        i=0;
     }
     else  if(e.key=="!")
     {
-        console.log(e.key);
-        alert("Access Denied");
+        document.getElementById("deny").style.display="block";
+        document.getElementById("code").innerHTML = ">   ";
+        i=0;
     }
     else
     {
@@ -35,5 +35,17 @@ document.onkeypress=function(e)
                 i++;
             }
         }
+    }
+}
+
+function hide(id)
+{
+    if(id===1)
+    {
+        document.getElementById("grant").style.display="none";
+    }
+    else if(id===2)
+    {
+        document.getElementById("deny").style.display="none";
     }
 }

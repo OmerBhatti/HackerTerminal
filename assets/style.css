@@ -38,7 +38,7 @@ header{
 }
 p{
     padding: 0 10px;
-    width: 30%;
+    width: 100px;
     float:left
 }
 .sticky {
@@ -61,4 +61,39 @@ footer{
 #themes{
     float:right;
     padding: 15px 20px;
+}
+.hide{
+    background-color: var(--fg);
+    margin: 10px;
+    height: 15px;
+    width: 15px;
+    border: none;
+    border-radius: 50%;
+    float: right;
+}
+.access{
+    display: none;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:var(--bg);
+    width:50%;
+    border: 3px var(--fg) solid;
+}
+.access h1{
+    text-align: center;
+    padding: 0px 20px;
+}
+.tooltip:hover::after{
+    content: "~ for Access Granted ! for Access Denied" ;
+    position: absolute ;
+    top: 7px ;
+    left: 120px;
+    min-width: 200px ;
+    border: 1px var(--fg) dotted ;
+    padding: 8px ;
+    color: var(--fg) ;
+    background-color: var(--bg);
+    z-index: 1 ;
 }
