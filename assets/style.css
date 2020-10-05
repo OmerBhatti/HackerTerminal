@@ -55,10 +55,14 @@ p{
     width: 15px;
     border: none;
     border-radius: 50%;
+    outline: none;;
 }
 #themes{
     float:right;
     padding: 15px 20px;
+}
+#theme:hover{
+    background-color: var(--bg) !important;
 }
 .hide{
     background-color: var(--fg);
@@ -68,6 +72,10 @@ p{
     border: none;
     border-radius: 50%;
     float: right;
+}
+.hide:hover{
+    background-color: var(--bg);
+    border: 1px solid var(--fg);
 }
 .access{
     display: none;
@@ -84,7 +92,7 @@ p{
     padding: 0px 20px;
 }
 .tooltip:hover::after{
-    content: "~ for Access Granted ! for Access Denied" ;
+    content: "~ for Access Granted ! for Access Denied ` for Login" ;
     position: absolute ;
     top: 7px ;
     left: 120px;
@@ -110,6 +118,40 @@ input, select, textarea{
     height: 28px;
     width: 38px;
     border-radius: 3px;;
+}
+.password{
+    display: none;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    background-color: var(--bg);
+    transform: translate(-50%,-50%);    
+    border: 2px solid var(--fg);
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+}
+#txtbox{
+    width: 100%;
+    color: var(--fg);
+    background-color: var(--bg);
+    border: 1px solid var(--fg);
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.hack{
+    color: var(--fg);
+    background-color: var(--bg);
+    border: 1px solid var(--fg);
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 60px;
+}
+.hack:hover{
+    color: var(--bg);
+    background-color: var(--fg);
 }
 @media (max-width:500px)
 {

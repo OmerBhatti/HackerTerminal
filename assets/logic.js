@@ -17,6 +17,10 @@ document.onkeypress=function(e)
         document.getElementById("code").innerHTML = ">   ";
         i=0;
     }
+    else  if(e.key=="`")
+    {
+        document.getElementById("password").style.display="block";
+    }
     else
     {
         if (i >= txt.length)
@@ -47,5 +51,10 @@ function hide(id)
     else if(id===2)
     {
         document.getElementById("deny").style.display="none";
+    }
+    else if(id===3)
+    {
+        document.getElementById("password").style.display="none";
+        document.getElementById("code").innerHTML += "<br><br>----> Login Successfully<br><br>>   ";
     }
 }
