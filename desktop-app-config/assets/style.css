@@ -1,0 +1,182 @@
+
+:root {
+--bg:rgb(26, 26, 26);
+--fg:rgb(9, 255, 0);
+}
+
+body{
+    margin:0px;
+    background-color: var(--bg);
+    font-family:'Courier New', Courier, monospace;
+    color: var(--fg);
+}
+html {
+    overflow:   scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+pre{
+    margin: 10px 10px;
+    font-size:13px;
+}
+.blink{
+    animation : blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%  {color:var(--fg)}
+    49% {color:var(--fg)}
+    60% {color: transparent;}
+    99% {color:transparent;}
+    100%{color:var(--fg)}
+}
+header{
+    border-bottom: 2px solid var(--fg);
+    position: sticky;
+    background-color: var(--bg);
+}
+p{
+    padding: 0 10px;
+    width: 100px;
+    float:left
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+#name{
+    padding: 5px 20px;
+    margin-top: 10px;
+}
+#theme{
+    height: 15px;
+    width: 15px;
+    border: none;
+    border-radius: 50%;
+    outline: none;;
+}
+#themes{
+    float:right;
+    padding: 15px 20px;
+}
+#theme:hover{
+    background-color: var(--bg) !important;
+}
+.hide{
+    background-color: var(--fg);
+    margin: 10px;
+    height: 15px;
+    width: 15px;
+    border: none;
+    border-radius: 50%;
+    float: right;
+}
+.hide:hover{
+    background-color: var(--bg);
+    border: 1px solid var(--fg);
+}
+.access{
+    display: none;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:var(--bg);
+    width:50%;
+    border: 3px var(--fg) solid;
+}
+.access h1{
+    text-align: center;
+    padding: 0px 20px;
+}
+.tooltip:hover::after{
+    content: "~ for Access Granted ! for Access Denied ` for Login" ;
+    position: absolute ;
+    top: 7px ;
+    left: 120px;
+    min-width: 200px ;
+    border: 1px var(--fg) dotted ;
+    padding: 8px ;
+    color: var(--fg) ;
+    background-color: var(--bg);
+    z-index: 1 ;
+}
+input, select, textarea{
+    color: transparent;
+    outline: none;
+}
+#mobile{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: url("https://icons-for-free.com/iconfiles/png/512/keyboard-131964784884068302.png") no-repeat 5px;
+    background-size: 30px;
+    border: none;
+    height: 28px;
+    width: 38px;
+    border-radius: 3px;;
+}
+.password{
+    display: none;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    background-color: var(--bg);
+    transform: translate(-50%,-50%);    
+    border: 2px solid var(--fg);
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+}
+#txtbox{
+    width: 100%;
+    color: var(--fg);
+    background-color: var(--bg);
+    border: 1px solid var(--fg);
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.hack{
+    color: var(--fg);
+    background-color: var(--bg);
+    border: 1px solid var(--fg);
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 60px;
+}
+.hack:hover{
+    color: var(--bg);
+    background-color: var(--fg);
+}
+@media (max-width:500px)
+{
+    #mobile{
+        display: block;    
+    }
+    p{
+        font-size: 22px;
+    }
+    code, pre{
+        font-size: 7px;
+
+    }
+    header{
+        margin-top: -10px;;
+        height: 55px;
+    }
+    #theme{
+        height: 20px;
+        width: 20px;
+        border: none;
+        border-radius: 50%;
+    }
+    #themes{
+        float:right;
+        padding: 22px 20px;
+    }
+}
