@@ -2,12 +2,6 @@ var i = 0;
 const fileUrl = 'assets/code.txt';
 var txt ; fetch(fileUrl).then( r => r.text() ).then( t => txt=t )
 var lettersPerClick = 3;
-var name = prompt("Please Enter Name: ");
-while(!name){
-    name=prompt('Please Enter Name: ');
-};
-
-document.getElementById("name").innerHTML += name.toUpperCase();
 
 document.onkeypress=function(e)
 {

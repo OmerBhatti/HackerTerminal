@@ -95,9 +95,27 @@ p{
     background-color: var(--bg);
     z-index: 1 ;
 }
-
+input, select, textarea{
+    color: transparent;
+    outline: none;
+}
+#mobile{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: url("https://icons-for-free.com/iconfiles/png/512/keyboard-131964784884068302.png") no-repeat 5px;
+    background-size: 30px;
+    border: none;
+    height: 28px;
+    width: 38px;
+    border-radius: 3px;;
+}
 @media (max-width:500px)
 {
+    #mobile{
+        display: block;    
+    }
     p{
         font-size: 22px;
     }
